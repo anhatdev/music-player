@@ -1,0 +1,59 @@
+extends ./layouts/common.pug     
+block append style
+    link(rel='stylesheet', href='/styles/list-song.css')
+block content
+        .list-song
+            .col
+                ul.list
+                    li.item
+                        .group-right
+                            b.id 01
+                            img.image(src="/images/01.jpg")
+                            i.icon(class="fas fa-caret-right")
+                            b.name Feelings
+                        .group-left                          
+                            span.singer Lauv
+                            span.time 03:09
+                            i.heart(class="fas fa-heart")
+                    li.item
+                        .group-right
+                            b.id 02
+                            img.image(src="/images/02.jpg")
+                            i.icon(class="fas fa-caret-right")
+                            b.name Instagram
+                        .group-left                          
+                            span.singer Dean
+                            span.time 04:15
+                            i.heart(class="fas fa-heart")
+                    li.item
+                        .group-right
+                            b.id 03
+                            img.image(src="/images/03.jpg")
+                            i.icon(class="fas fa-caret-right")
+                            b.name Beautiful
+                        .group-left                          
+                            span.singer Crush
+                            span.time 03:48
+                            i.no-heart(class="fas fa-heart")
+            .col
+                .player
+                    .disc
+                    .circle
+                    .infoBox
+                        .wrap-infoBox
+                            b.songName Feelings
+                            span.singer Lauv
+                            .time-bar
+                                .watched
+                    .controls
+                        div.button
+                            i(class="fas fa-backward")
+                        div.button
+                            i(class="fas fa-play")
+                        div.button
+                            i(class="fas fa-forward")
+                    
+                       
+                        
+                        
+

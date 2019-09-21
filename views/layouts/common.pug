@@ -1,0 +1,28 @@
+html
+    head
+        link(rel="stylesheet",src="/styles/reset.css")
+        block style
+            link(rel='stylesheet', href='/styles/custom.css')
+        link(href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap",rel="stylesheet")
+        script(src="https://kit.fontawesome.com/cb2ec89b0c.js")
+    body
+        .container
+            .sidebar
+                .colorBox
+                ul.nav
+                    li.nav-item
+                        a.nav-link(href="/")
+                            i(class="fas fa-home")
+                    li.nav-item
+                        a.nav-link(href="/")
+                            i(class="fas fa-poll")
+                    li.nav-item.active
+                        a.nav-link.active(href="/list-song")
+                            i(class="fas fa-compact-disc")
+                    li.nav-item
+                        a.nav-link(href="/list-song")
+                            i(class="far fa-image")                    
+                    
+                i.expand(class="fas fa-arrows-alt-h")
+            .content
+                block content

@@ -1,55 +1,19 @@
-html
-    head
-        link(rel="stylesheet",src="https://meyerweb.com/eric/tools/css/reset/reset.css")
-        link(rel='stylesheet', href='/styles/custom.css')
-        link(href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap",rel="stylesheet")
-        script(src="https://kit.fontawesome.com/cb2ec89b0c.js")
-    body
-        .container
-            .col 
-                ul.list
-                    li.item
-                        .group-right
-                            b.id 01
-                            img.image(src="/images/01.jpg")
-                            i.icon(class="fas fa-caret-right")
-                            b.name Feelings
-                        .group-left                          
-                            span.singer Lauv
-                            span.time 03:09
-                            i.heart(class="fas fa-heart")
-                    li.item
-                        .group-right
-                            b.id 02
-                            img.image(src="/images/02.jpg")
-                            i.icon(class="fas fa-caret-right")
-                            b.name Instagram
-                        .group-left                          
-                            span.singer Dean
-                            span.time 04:15
-                            i.heart(class="fas fa-heart")
-                    li.item
-                        .group-right
-                            b.id 03
-                            img.image(src="/images/03.jpg")
-                            i.icon(class="fas fa-caret-right")
-                            b.name Beautiful
-                        .group-left                          
-                            span.singer Crush
-                            span.time 03:48
-                            i.no-heart(class="fas fa-heart")
-            .col
-                .player
-                    .disc
-                    .circle
-                    .controls
-                        div.button
-                            i(class="fas fa-backward")
-                        div.button
-                            i(class="fas fa-play")
-                        div.button
-                            i(class="fas fa-forward")
-                       
-                        
-                        
-
+extends ./layouts/common.pug     
+block append style
+    link(rel='stylesheet', href='/styles/home.css')
+block content
+    .home
+        .row
+            .search-box
+                input#searchTerm.search-term(type="text",placeholder="Search for song, artist etc...")
+                button.search-button
+                    i.search-icon(class="fa fa-search")
+                ul#searchList.search-list
+                    li.search-item Anh
+                    li.search-item Anh 
+                        span.hint ơi ở lại
+                    li.search-item Anh 
+                        span.hint là vô địch
+            select.search-option(name="")
+                option(value="All") All
+    script(src="/scripts/home.js")

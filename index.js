@@ -13,3 +13,7 @@ app.get('/',(req,res)=>{
     res.render('index');
 });
 
+app.get('/list-song',(req,res)=>{
+    res.render('list-song');
+});
+
