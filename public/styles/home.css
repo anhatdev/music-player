@@ -56,3 +56,26 @@
     border-radius: 0 5px 5px 0;
     background: rgba(255,255,255,0.5    );
 }
+
+.album-list{
+    display: flex;
+}
+.album{
+    flex:0 0 150px;
+}
+.album:not(:last-child){
+    margin-right:20px;
+}
+.album-thumbnail{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.album-name{
+    font-size:14px;
+}
+.album-singer{
+    font-size:12px;
+    color:#bdbdbd;
+}
