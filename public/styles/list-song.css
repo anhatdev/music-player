@@ -1,12 +1,14 @@
 .show{
-    z-index: 0 !important; 
-    transform: translateY(-90%) !important;
+    top: -75px !important;
+    z-index: 0 !important;
 }
 .spin-animation{
     animation-name:spin;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    top: -50px !important;
+    box-shadow: 0 0 0 5px #fff   !important;
 }
 i{
     pointer-events:none;
@@ -85,7 +87,8 @@ box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.3);
     background-size:cover;
     position: absolute;
     top:-35px;
-    left:25px;    
+    left:35px;    
+    box-shadow: 0 0 0 10px #fff;
     z-index: 1;
 }
 @keyframes spin{
@@ -93,36 +96,27 @@ box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.3);
         transform: rotate(360deg);
     }
 }
-.circle{
+.disc::after{
+    content:"";
     width:20px;
     height: 20px;
     background: #fff;
     border-radius: 50%;
     position: absolute;
-    top:5px;
-    left:65px;
-    z-index: 2;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .infoBox{
-    width:300px;
-    height: 80px;
-    background: rgba(255,255,255,0.5);
-    border-radius: 10px 10px 0 0;
     position: absolute;
-    transform: translateY(20%);
-    left:25px;
-    padding-top:5px;
-    padding-right:10px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: flex-end;
-    z-index: -1;
-    transition: 0.7s linear;
-    
-}
-.wrap-infoBox{
-    flex-basis: 60%;
-    
+    top: 0;
+    right: 15px;
+    left: 15px;
+    padding: 13px 22px 10px 184px;
+    background-color:rgba(255, 255, 255, 0.7);
+    border-radius: 15px 15px 0 0;
+    transition: 0.3s ease top;
+    z-index: -1;    
 }
 .infoBox .songName{
     font-size:14px;
